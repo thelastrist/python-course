@@ -17,3 +17,4 @@ else:
     module = iNumber
 
 print("Модуль числа", iNumber, "равен", module)
+

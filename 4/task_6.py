@@ -19,3 +19,11 @@ print('Задача 6. Игра в кубики')
 # Сумма: 7
 # Владелец платит
 # Игра окончена
+cubeK = int(input("Кубик Кости:"))
+cubeOwner = int(input("Кубик владельца:"))
+
+if cubeK >= cubeOwner:
+ print(cubeK - cubeOwner, "\nКостя платит")
+else:
+ print(cubeK + cubeOwner, "\nВладелец платит")
+
