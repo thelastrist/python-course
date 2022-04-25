@@ -19,3 +19,20 @@ print('Задача 10. Почта')
 
 # второй —  при выполнении условия выводится сообщение:
 # «Посылку получить нельзя».
+# 8-10 12-14 15-18 20-22 +
+# 0-8 10-12 14-15 18-20 22-0 -
+iTime = int(input("Введите время в часах (от 0 до 23):"))
+
+print("\nПервый способ")
+if (iTime >= 8 and iTime <= 10) or (iTime >= 12 and iTime <=14) or (iTime >= 15 and iTime <= 18) or (iTime >= 20 and iTime <= 22):
+ print("Можно получить посылку")
+else:
+ print("Нельзя получить посылку") 
+
+print("\nВторой способ")
+
+
+if (iTime < 8) or (iTime > 10 and iTime < 12) or (iTime > 14 and iTime < 15) or (iTime > 18 and iTime < 20) or (iTime > 22):
+ print("Нельзя получить посылку") 
+else:
+ print("Можно получить посылку")
