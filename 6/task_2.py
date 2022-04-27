@@ -19,11 +19,21 @@ print('Задача 2. Коллекторы')
 sName = input("Введите имя должника: ")
 iDuty = int(input("Введите сумму долга: "))
 iPayment = 0
-while iDuty < iPayment:
- print(sName, "ваша задолженность составляет %n рублей.", iDuty)
+#sFinish = "лей"
+while iDuty > iPayment:
+# printf(sName, "ваша задолженность составляет %n рублей.", iDuty)
+ if ( iDuty % 10 == 1):
+  sFinish = "ль"
+ elif ( iDuty % 10 > 1 and iDuty % 10 < 5 ):
+  sFinish = "ля"
+ else:
+  sFinish = "лей"
+
+ print(sName, "ваша задолженность составляет", iDuty, "руб" + sFinish + ".")
  iPayment = int(input("Сколько рублей вы внесёте прямо сейчас, чтобы её погасить? "))
 
 
 print("Отлично, ", sName, "! Вы погасили долг. Спасибо!")
+print("iDuty = ", iDuty, "iPayment = ", iPayment)
 
 
