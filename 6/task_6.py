@@ -18,3 +18,18 @@ print('Задача 6. Поставьте оценку!')
 # Введите число: 0
 # Кол-во положительных чисел: 1
 # Кол-во отрицательных чисел: 2
+# Долой инпуты! Времяжорки!
+
+bFlag = True
+iNeg, iPos = 0, 0
+
+while bFlag:
+ number = int(input("Введите число: "))
+ if number > 0:
+  iPos += 1
+ elif number < 0:
+  iNeg += 1
+ else:
+  bFlag = False
+
+print("Отрицательных: ", iNeg, "положительных: ", iPos)

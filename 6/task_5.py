@@ -13,14 +13,20 @@ print('Задача 5. Счастливый билетик')
 # Подумайте, нужны ли для решения этой задачи циклы?
 # Долой инпуты! Времяжорки!
 number = int(input("Введите число: "))
-iFirst, iSecond = 0, 0
-print(number // 1000000, number // 100000, number // 10000)
+iFirst, iSecond, iSum1, iSum2 = 0, 0, 0, 0
 
 if ((number // 100000 > 0) and (number // 100000 < 10)):
+# divide by 2 parts
+ iFirst = number // 1000
+ iSecond = number % 1000
+
+ iSum1 = iFirst // 100 + (iFirst // 10 - (iFirst  // 100 * 10)) + iFirst % 10
+ iSum2 = iSecond // 100 + (iSecond // 10 - (iSecond  // 100 * 10)) + iSecond % 10
+ if iSum1 == iSum2:
+  print("Скорее кушать этот билет, он счастливый!")
+
+
+else:
  print ("Должно быть 6 цифры в билете. Ваш билет ненастоящий, вы оштрафованы на ", number, "рублей")
 
-iFirst = number // 1000
-iSecond = number % 1000
-
-if iFirst == iSecond:
- print("Скорее кушать этот билет, он счастливый!")
+#print(number // 1000000, number // 100000, number // 10000, iFirst, iSecond, iSum1, iSum2)
