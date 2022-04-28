@@ -28,10 +28,10 @@ print('Задача 9. Прогрессивный налог 2')
 
 iRevenue = int(input("Введите ваш доход:"))
 if (iRevenue <= 10000):
- print ("Ваш налог", iRevenue / 100 * 13)
+    print ("Ваш налог", iRevenue / 100 * 13)
 elif (iRevenue <= 50000):
- print ("Ваш налог", (iRevenue - 10000) / 100 * 20 + 1300)
- print ((iRevenue - 10000) / 100 * 20 , iRevenue / 100 * 13)
+    print ("Ваш налог", (iRevenue - 10000) / 100 * 20 + 1300)
+# print ((iRevenue - 10000) / 100 * 20 , iRevenue / 100 * 13)
 else:
- print ("Ваш налог", (iRevenue - 50000) / 100 * 30 + 40000 / 100 * 20 + 10000 / 100 * 13)
+    print ("Ваш налог", (iRevenue - 50000) / 100 * 30 + 40000 / 100 * 20 + 10000 / 100 * 13)
 # print ((iRevenue - 50000) / 100 * 30, (iRevenue - 10000) / 100 * 20 , iRevenue / 100 * 13)

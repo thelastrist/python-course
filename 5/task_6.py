@@ -13,7 +13,10 @@ print('Задача 6. Защита от дурака')
 
 #iPlace = int(input("Введите место в списке поступающих:"))
 iNumber = int(input("Введите число:"))
-if ((iNumber // 10) > 0 and (iNumber // 10) < 10) or ((iNumber // 10) < 0 and (iNumber // 10) > -10):
- print(iNumber, " - двузначное число")
+
+print (iNumber // 10)
+if ((iNumber // 10) > 0 and (iNumber // 10) < 10) or \
+            ((iNumber // 10) > -11 and (iNumber // 10) < -1):
+    print(iNumber, " - двузначное число")
 else:
- print(iNumber, " - недвузначное число")
+    print(iNumber, " - недвузначное число")
