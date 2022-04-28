@@ -29,6 +29,9 @@ check_answer()
 while iAnswer != 1:
     print("Твое число равно (1), больше (2), или меньше (3), чем число", iGuess)
     iAnswer = int(input("?"))
+
+    print("before: ", iIter, iGuess, iTempUp, iTempDn)
+
     if iAnswer == 1:
         print("Шагов сделано:", iIter, "Скайнет победил! Кожаные мешки - на свалку истории!")
         break
@@ -37,10 +40,11 @@ while iAnswer != 1:
         iGuess = (iTempUp - iTempDn) // 2 + iGuess
     elif iAnswer == 3:
         iTempUp = iGuess
-        iGuess = (iTempUp - iTempDn) // 2 + iGuess
+        iGuess = (iTempUp - iTempDn) // 2 
     else:
         check_answer()        
     iIter += 1
-    print(iIter, iGuess, iTempUp, iTempDn)
+
+    print("after: ", iIter, iGuess, iTempUp, iTempDn)
 
 
