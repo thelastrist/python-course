@@ -14,37 +14,37 @@ print('Задача 10. Игра «Компьютер угадывает чис�
 # которая с помощью цепочки таких вопросов и ответов мальчика угадывает число.
  
 # Дополнительно: сделайте так, чтобы можно было гарантированно угадать число за семь попыток.
-def check_answer():
+def how_to_answer():
     print("Отвечайте, пожалуйста, одним из трёх вариантов: \n1 — равно, \n2 — больше, \n3 — меньше.\n")
 
 iTempUp = MAX = 100
 iTempDn = MIN = 1
 iAnswer = 0
 iGuess = MAX // 2 
-iIter = 0
+iIter = 1
 
 print("Здравствуйте! Вас приветствует искусственный интеллект Z80!")
-check_answer()
+how_to_answer()
 
 while iAnswer != 1:
     print("Твое число равно (1), больше (2), или меньше (3), чем число", iGuess)
     iAnswer = int(input("?"))
 
-    print("before: ", iIter, iGuess, iTempUp, iTempDn)
+    # print("before: ", iIter, iGuess, iTempUp, iTempDn)
 
     if iAnswer == 1:
-        print("Шагов сделано:", iIter, "Скайнет победил! Кожаные мешки - на свалку истории!")
+        print("Шагов сделано:", str(iIter) + ". Скайнет победил! Кожаные мешки - на свалку истории!")
         break
     elif iAnswer == 2:
         iTempDn = iGuess
         iGuess = (iTempUp - iTempDn) // 2 + iGuess
     elif iAnswer == 3:
         iTempUp = iGuess
-        iGuess = (iTempUp - iTempDn) // 2 
+        iGuess = (iTempUp - iTempDn) // 2 + iTempDn
     else:
-        check_answer()        
+        how_to_answer()        
     iIter += 1
 
-    print("after: ", iIter, iGuess, iTempUp, iTempDn)
+    # print("after: ", iIter, iGuess, iTempUp, iTempDn)
 
 
