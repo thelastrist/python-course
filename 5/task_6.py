@@ -14,9 +14,18 @@ print('Задача 6. Защита от дурака')
 #iPlace = int(input("Введите место в списке поступающих:"))
 iNumber = int(input("Введите число:"))
 
-print (iNumber // 10)
+# # # # # print (iNumber // 10) прикольно ктрл к с в визуалстудии
 if ((iNumber // 10) > 0 and (iNumber // 10) < 10) or \
-            ((iNumber // 10) > -11 and (iNumber // 10) < -1):
+            ((iNumber * -1 // -10) > 0  and (iNumber * -1 // -10) < 10):            # really it was so simple?
+            # and \
+            # ((iNumber // 10) > -11 and (iNumber // 10) < -1) and \
+            # (iNumber != -100 and iNumber != -9 and iNumber == -10):             # Кривой костыль:) Так и не вкурил целочисленное деление отрицательных величин :) МБКН
     print(iNumber, " - двузначное число")
 else:
     print(iNumber, " - недвузначное число")
+
+""" i = 0
+while i <= 110:
+    print(i, i // 10, i * -1 // 10, i * -1 // -10)
+    # i++
+    i += 1 """
