@@ -1,3 +1,4 @@
+
 print('Задача 5. Счастливый билетик')
 
 # В старину, когда даже в столице билеты в общественном транспорте выдавали контролёры,
@@ -14,8 +15,48 @@ print('Задача 5. Счастливый билетик')
 # Долой инпуты! Времяжорки!
 number = int(input("Введите число: "))
 iFirst, iSecond, iSum1, iSum2 = 0, 0, 0, 0
+count = 1
 
-if ((number // 100000 > 0) and (number // 100000 < 10)):
+#555663
+# get last digit (number % 10)
+  # 3
+# get last-1 digit (number % 100) - prev - (number // 10)
+  # 63  - 3 (60) - () (brain breaked)
+  # let's try func
+""" def get_digit(from_one, which_one):
+  digit = from_one
+  return digit
+ """
+ # no
+
+ 
+while count < 7:
+    if count < 4:
+        iFirst = number % 10
+        number //= 10
+        iSum1 += iFirst
+ #       iFirst = number % (10 ** count) - iSum1
+ #       iSum1 += number % (10 ** count) - iSum1
+    else:
+        iSecond = number % 10
+        number //= 10
+        iSum2 += iSecond
+#
+#    print(count, iFirst, iSecond, iSum1, iSum2)
+    count += 1
+
+
+
+#if sum_left == sum_right:
+if iSum1 == iSum2:
+    print('Билет счастливый!')
+else:
+    print('Неудачный билет!')
+
+
+
+
+""" if ((number // 100000 > 0) and (number // 100000 < 10)):
 # divide by 2 parts
  iFirst = number // 1000
  iSecond = number % 1000
@@ -27,6 +68,6 @@ if ((number // 100000 > 0) and (number // 100000 < 10)):
 
 
 else:
- print ("Должно быть 6 цифры в билете. Ваш билет ненастоящий, вы оштрафованы на ", number, "рублей")
+ print ("Должно быть 6 цифры в билете. Ваш билет ненастоящий, вы оштрафованы на ", number, "рублей") """
 
 #print(number // 1000000, number // 100000, number // 10000, iFirst, iSecond, iSum1, iSum2)
