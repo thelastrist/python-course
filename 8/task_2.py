@@ -23,6 +23,12 @@ print('Задача 2. Долги')
 # Общая сумма долга: 8000
 
 debtors_q = int(input("Введите количество должников: "))
+curr_debt, sum_debt = 0, 0
 
-for i in range(0, debtors_q+1):
-    
+for i in range(0, debtors_q + 1, 5):
+    print("Должник №"+str(i))
+    curr_debt = int(input("Сколько должны?"))
+    #i += 5
+    sum_debt += curr_debt
+
+print("Общая сумма долга:", sum_debt)
