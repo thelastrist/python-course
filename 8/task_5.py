@@ -25,3 +25,28 @@ print('Задача 5. Функция 2')
 # В точке 0 функция равна 1
 # В точке -1 функция равна 6
 # В точке -2 функция равна 9
+def function(x):
+    y = x ** 3 + 2 * x ** 2 - 4 * x + 1
+    return(y)
+
+segment_begin = -2
+segment_end = 2
+step = -1
+tmp = 0
+
+segment_begin = int(input("Enter begin of segment: "))
+segment_end = int(input("Enter end of segment: "))
+step = int(input("Enter step: "))
+
+if segment_begin < segment_end and step < 0:
+    tmp = segment_begin
+    segment_begin = segment_end
+    segment_end = tmp - 1
+
+
+for i in range(segment_begin, segment_end, step):
+    print("x = ", i, "f(x) = ", function(i))
+
+
+#for i in range(10, -6, -2):
+#    print(i)

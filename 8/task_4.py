@@ -12,9 +12,12 @@ number_c = int(input("Введите число c: "))
 average, counter = 0, 0
 
 
-for i in range(number_a, number_b + 1, number_c):
+for i in range(number_a, number_b + 1): #, number_c):
+#    print("i=", i)
     if i % number_c == 0:
         counter += 1
         average += i
-
-print("Average is", average / counter)
+if counter == 0:
+    print("Ни одного кратного", number_c, "числа")
+else:
+    print("Среднее:", average / counter, "всего кратных чисел: ", counter)
