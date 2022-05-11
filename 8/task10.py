@@ -34,3 +34,36 @@ print('Задача 10. Кинотеатр')
 # Введите кол-во мальчиков: 100
 # Введите кол-во девочек: 1
 # Ответ: Нет решения
+i, counter, diff, max, min = 0, 0, 0, 0, 0
+b_boys = True
+out_string = ''
+boys_X = int(input("Enter quantity of boys (X): "))
+girls_Y = int(input("Enter girls quantity (Y): "))
+
+if boys_X // girls_Y > 2 or girls_Y // boys_X > 2:
+    print("No solution")
+    exit(0)
+
+if boys_X > girls_Y:
+    max = boys_X
+    min = girls_Y
+    b_boys = True
+else:
+    max = girls_Y
+    min = boys_X
+    b_boys = False
+
+diff = max - min
+for i in range(1, min + 1):
+    if b_boys:
+        out_string += 'BG'
+        if diff > 0:
+            out_string += 'B'
+            diff -= 1
+    else:
+        out_string += 'GB'
+        if diff > 0:
+            out_string += 'G'
+            diff -= 1
+
+print(out_string)
