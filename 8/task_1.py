@@ -14,5 +14,5 @@ print('Задача 1. Космическая еда')
 weight = 100
 per_month = 4
 
-for i in range(1, weight // per_month + 1):
-    print("Прошло месяцев:", i, " должно остаться", weight - i * per_month, "кило")
+for i in range(4, weight +1, per_month):
+    print("Прошло месяцев:", i // per_month, " должно остаться", weight - i, "кило")
