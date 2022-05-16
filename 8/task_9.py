@@ -12,7 +12,7 @@ divisible, divisor, quotient = x - 1, x - 2, 0
 for i in range(2, 7):
     divisible *= x - (2 ** i - 1)
     divisor *= x - 2 ** i
-    print(divisible, 2**i-1, divisor)
+#    mixed up 2**i with i**2
     
 quotient = divisible / divisor
 print("Result =", quotient)
